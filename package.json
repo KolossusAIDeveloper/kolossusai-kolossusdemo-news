@@ -13,7 +13,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --watchAll=false"
+    "test": "react-scripts test --watchAll=false",
+    "postinstall": "node -e \"const fs=require('fs'),p='node_modules/fork-ts-checker-webpack-plugin/node_modules/ajv-keywords/keywords/_formatLimit.js';if(fs.existsSync(p)){let c=fs.readFileSync(p,'utf8');c=c.replace(/var format = formats\\[name\\];/,'var format = formats && formats[name];');fs.writeFileSync(p,c);}\""
   },
   "eslintConfig": {
     "extends": ["react-app"]
