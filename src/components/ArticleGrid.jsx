@@ -1,6 +1,6 @@
 import React from 'react';
 import './ArticleGrid.css';
-import ArticleCard from './ArticleCard';
+import ArticleCard from './ArticleCard.jsx';
 
 export default function ArticleGrid({ articles, loading, onSelect }) {
   if (loading) {

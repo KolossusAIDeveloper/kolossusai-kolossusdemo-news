@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
-import Header from './components/Header';
-import CategoryTabs from './components/CategoryTabs';
-import SearchBar from './components/SearchBar';
-import ArticleGrid from './components/ArticleGrid';
-import ArticleDetail from './components/ArticleDetail';
+import Header from './components/Header.jsx';
+import CategoryTabs from './components/CategoryTabs.jsx';
+import SearchBar from './components/SearchBar.jsx';
+import ArticleGrid from './components/ArticleGrid.jsx';
+import ArticleDetail from './components/ArticleDetail.jsx';
 import { fetchAllFeeds } from './hooks/useFeed';
 import { deduplicateArticles } from './hooks/dedup';
 
