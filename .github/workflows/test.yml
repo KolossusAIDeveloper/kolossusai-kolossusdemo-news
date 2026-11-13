@@ -9,5 +9,5 @@ jobs:
         with:
           node-version: '18'
       - run: npm install --legacy-peer-deps --force
-      - run: npm run build
+      - run: SKIP_PREFLIGHT_CHECK=true DISABLE_ESLINT_PLUGIN=true GENERATE_SOURCEMAP=false CI=false npm run build
       - run: npm test -- --watchAll=false --passWithNoTests

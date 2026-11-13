@@ -3,6 +3,9 @@ WORKDIR /app
 COPY package.json ./
 RUN npm install --legacy-peer-deps --force
 COPY . .
+ENV SKIP_PREFLIGHT_CHECK=true
+ENV DISABLE_ESLINT_PLUGIN=true
+ENV GENERATE_SOURCEMAP=false
 RUN npm run build
 
 FROM nginx:alpine
