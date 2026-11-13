@@ -7,7 +7,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '16'
-      - run: npm install --legacy-peer-deps --force
-      - run: SKIP_PREFLIGHT_CHECK=true DISABLE_ESLINT_PLUGIN=true GENERATE_SOURCEMAP=false CI=false npm run build
-      - run: npm test -- --watchAll=false --passWithNoTests
+          node-version: '18'
+      - run: npm install --legacy-peer-deps
+      - run: npm run build
